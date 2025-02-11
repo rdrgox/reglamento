@@ -14,6 +14,7 @@
 \usepackage{parskip} % arreglo de tabluación del documento
 \usepackage[figurename=Figura]{caption} % cambiar nombre del caption de las fotos
 \usepackage{smartdiagram} % insercción de diagramas
+\usepackage{longtable} % Para tablas largas que ocupen varias páginas
 \usepackage{zed-csp} % insercción de tablas
 \usepackage[scaled]{helvet} % Fuente Helvetica
 \usepackage[pages=some]{background} % imagen de fondo
@@ -72,7 +73,41 @@
     \tableofcontents
     \clearpage
 
-     % -- Documento
+
+    % Historial de cambios
+    \section{Historial de cambios}
+    
+    \begin{longtable}{|p{2.5cm}|p{3.5cm}|p{6cm}|p{3cm}|}
+        \hline
+        \textbf{Fecha} & \textbf{Autor} & \textbf{Cambio realizado} & \textbf{Título} \\
+        \hline
+        \endfirsthead
+        
+        \hline
+        \textbf{Fecha} & \textbf{Autor} & \textbf{Cambio realizado} & \textbf{Título} \\
+        \hline
+        \endhead
+    
+        \hline
+        \multicolumn{4}{|r|}{Continúa en la siguiente página} \\
+        \hline
+        \endfoot
+    
+        \hline
+        \endlastfoot
+    
+        18-12-2024 & Lalo, SlayeR, Maiden, BlackLung & Redacción de documento & Corrección inicial. \\ 
+        \hline
+        10-02-2025 & Lalo y BlackLung & Se añadió una nueva sección grabación obligatoria y demos. & Nueva sección. \\ 
+        \hline
+        - & - & - & - \\ 
+        \hline
+    \end{longtable}
+    \clearpage
+
+
+    
+    % -- Documento
      \section{Introducción}
      Bienvenidos a la Competición "The Last Dance" de Tactical Ops Chile. Este reglamento ha sido diseñado para garantizar una experiencia justa, competitiva y divertida para todos los participantes.
 
@@ -191,6 +226,20 @@
         \item Subir los resultados al canal de Discord designado para esta función. En caso de no ser posible, se habilitará un FTP para compartir los archivos.
         \item Actualizar resultados antes del inicio de la siguiente fecha.
     \end{itemize}
+
+    \subsection{Grabación obligatoria y versiones permitidas}
+    Antes de comenzar el partido, asegúrense de utilizar algunas de las versiones permitidas: v469d, v469e  RC7 release, Legacy v451. La versión v469RC4 release no está permitida.
+
+Todos los jugadores deben grabar una demo y transmitir por Discord. Esto será verificado por cada capitán o representante designado para el partido. En caso de problemas relacionados con hardware o recursos de computador, se deja a criterio de ambos clanes decidir sobre esta práctica.
+
+El observador designado para verificar la grabación debe tener el micrófono apagado y el modo de audífonos desactivado en Discord \ref{fig:discord}, en el canal donde esté observando. Esta designación debe realizarse antes del partido.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=8cm]{img/discord.png}
+    \caption{Reglas discord para observador.}
+    \label{fig:discord}
+\end{figure} 
 
     \subsection{Solicitud de Demos}
     Los representantes de los clanes pueden solicitar demos a los administradores dentro de un plazo máximo de dos rondas después del encuentro. Los jugadores deberán subir las demos al canal (DEMOS) de Discord en un plazo máximo de 48 horas tras la notificación. De no cumplir, los líderes de los clanes analizarán una posible sanción.
