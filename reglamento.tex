@@ -1,34 +1,35 @@
 \documentclass[a4paper, 11pt]{article}
-\usepackage[utf8]{inputenc} %interprete de simbolos en español
+\usepackage[utf8]{inputenc} %interprete de símbolos en español
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage[margin=2.5cm, top=2.5cm, includefoot]{geometry}
 \usepackage{url}
-\usepackage{graphicx} % Insercción de imágenes
+\usepackage{graphicx} % Inserción de imágenes
 \usepackage{subfigure}
 \usepackage[table,xcdraw]{xcolor} % detección de colores
-\usepackage[most]{tcolorbox} % Insercción de cuadros en la portada
+\usepackage[most]{tcolorbox} % Inserción de cuadros en la portada
 \usepackage{fancyhdr} % definir el estilo de la página
-\usepackage[hidelinks]{hyperref} % gestión de hipervinculos
-\usepackage{listings} % inserccón de codigo 
-\usepackage{parskip} % arreglo de tabluación del documento
+\usepackage[hidelinks]{hyperref} % gestión de hipervínculo
+\usepackage{listings} % inserción de código 
+\usepackage{parskip} % arreglo de tabulación del documento
 \usepackage[figurename=Figura]{caption} % cambiar nombre del caption de las fotos
-\usepackage{smartdiagram} % insercción de diagramas
+\usepackage{smartdiagram} % inserción de diagramas
 \usepackage{longtable} % Para tablas largas que ocupen varias páginas
-\usepackage{zed-csp} % insercción de tablas
+\usepackage{zed-csp} % inserción de tablas
 \usepackage[scaled]{helvet} % Fuente Helvetica
 \usepackage[pages=some]{background} % imagen de fondo
 \usepackage{sectsty} 
 \usepackage{csquotes} % cargar para asegurar de que los textos citados se componen de acuerdos al idioma principal
 \usepackage{tikz}
 \usepackage{eso-pic}
-\usepackage{stackengine} % opcion1 incluir para poner texto sobre imagen
-\usepackage[backend=biber,style=apa,sorting=anyt]{biblatex} % uso de bibliografia
+\usepackage{stackengine} % opción incluir para poner texto sobre imagen
+\usepackage[backend=biber,style=apa,sorting=anyt]{biblatex} % uso de bibliografía
 \addbibresource{referencias.bib} % referencia .bib
+\usepackage{subfiles} 
 
 \renewcommand\familydefault{\sfdefault} % Quitar fuente default
 
-\sectionfont{\fontsize{14}{16.8}\selectfont} % {Tamaño de fuente}{Salto de linea minimo 1.2}
+\sectionfont{\fontsize{14}{16.8}\selectfont} % {Tamaño de fuente}{Salto de linea mínimo 1.2}
 \subsectionfont{\fontsize{12}{14.4}\selectfont}
 
 % Declaración de variables
@@ -50,7 +51,7 @@
     \begin{titlepage}
         \begin{center}
             {\Huge\ \textbf{\nombreInforme}}\par
-            {\huge\ Reglamento Liga The Last Dance 2024}\par          
+            {\huge\ Reglamento Tarreo Last Dance 2026 v3}\par          
         \end{center}
 
         \vfill
@@ -64,13 +65,14 @@
 
         \textbf{Equipo responsable: } Comunidad de Tactical Ops Chile\par\vspace{0.2cm}
         \textbf{Actualizado por: } BlackLung, Lalo, Slayer, Maiden\par\vspace{0.2cm}
-        \textbf{Fecha: } 06-12-2024\par\vspace{0.3cm}
+        \textbf{Fecha: } 17-02-2026\par\vspace{0.3cm}
 
     \end{titlepage}
     \clearpage
 
     % -- Tabla de Contenido
     \tableofcontents
+    
     \clearpage
 
 
@@ -96,11 +98,7 @@
         \hline
         \endlastfoot
     
-        18-12-2024 & Lalo, SlayeR, Maiden, BlackLung & Redacción de documento & Corrección inicial. \\ 
-        \hline
-        15-01-2025 & Representantes de cada clan & Se actualiza sección.  & Abandono de un clan. \\ 
-        \hline
-        10-02-2025 & Lalo y BlackLung & Se añadió una nueva sección grabación obligatoria y demos. & Nueva sección. \\ 
+        17-02-2026 & Staff & Redacción de documento & Corrección inicial. \\ 
         \hline
         
     \end{longtable}
@@ -109,39 +107,21 @@
 
     
     % -- Documento
-     \section{Introducción}
-     Bienvenidos a la Competición "The Last Dance" de Tactical Ops Chile. Este reglamento ha sido diseñado para garantizar una experiencia justa, competitiva y divertida para todos los participantes.
+    \section{Introducción}
+    \subfile{sections/introduction}
 
-    El documento incluye las normas generales, las responsabilidades de los clanes, y los procedimientos necesarios para el desarrollo de los partidos. Nuestro objetivo es fomentar el juego limpio y fortalecer la comunidad de jugadores.
-
-    Les invitamos a leer cuidadosamente cada sección del reglamento. Este será el marco de referencia que guiará cada aspecto de la competición, desde las inscripciones hasta las fases finales.
-
-    ¡Les deseamos la mejor de las suertes a todos los clanes y jugadores en esta Liga!
     \clearpage
 
     \section{Inscripciones y Traspasos de Jugadores}
-    
-    \begin{itemize}
-        \item Mínimo 7 jugadores y un máximo 11 por cada clan participante.
-        \item Cada clan debe tener un representante oficial, quien será responsable de:
-        \begin{itemize}
-            \item Apoyar a la comunidad en lo necesario para el correcto desarrollo de la competición.
-            Delegar sus funciones, si no puede cumplirlas, a una persona de confianza.
-            \item El representante tiene la obligación de informar a su clan sobre las decisiones y acuerdos tomados en las reuniones convocadas por la comunidad.
-        \end{itemize} 
-                
-        \item Cada jugador puede realizar un máximo de dos cambios de clan durante la competición, hasta la ronda número 7.
-        \item Los equipos pueden realizar un máximo de tres cambios de jugadores a lo largo de la competición.
-        \item Las inscripciones y cambios de clan deben notificarse en el grupo de WhatsApp de representantes con al menos 48 horas de anticipación antes del próximo partido.
-        El representante debe editar su publicación original de inscripción para reflejar los cambios, indicando junto al nombre del jugador la hora y fecha del cambio. No se aceptarán publicaciones nuevas para este propósito.
-      \end{itemize}
+    \subfile{sections/inscripcion}
+
     \clearpage
 
     \section{Facultades y Obligaciones del Representante de Clan}
     
     \begin{itemize}
         \item Mantener informado a su equipo sobre los acuerdos y comunicados oficiales difundidos por los medios oficiales (como el grupo de WhatsApp de representantes).
-        \item Durante un partido de liga, solo los representantes o sus delegados podrán gestionar la administración del encuentro. Esto debe acordarse entre los clanes al inicio del partido.
+        \item Durante un partido, solo los representantes o sus delegados podrán gestionar la administración del encuentro. Esto debe acordarse entre los clanes al inicio del partido.
         \item El representante debe moderar o mirar al menos un partido por ronda de liga. Si no puede hacerlo, debe designar a un delegado.
     \end{itemize}
 
@@ -149,60 +129,95 @@
 
     \section{Modalidad de Competición}
 
-    \subsection{Etapa inicial}
+    \subsection{Formato general del torneo}
 
-    Los cinco mejores clanes de la tabla clasificarán directamente a la final presencial.
-    En caso de empate, se resolverá siguiendo este orden de criterios:
+    El torneo se disputará en dos etapas: \textbf{Fase de Grupos} y \textbf{Etapa Final (Playoffs)}.
+
+    \subsection{Fase de Grupos}
+
+    La fase de grupos estará compuesta por \textbf{dos grupos: Grupo A y Grupo B}, con los clanes distribuidos de manera equitativa.  
+    Dentro de cada grupo se utilizará el formato \textbf{Round-Robin} (todos contra todos), donde cada clan deberá enfrentarse a todos los demás clanes de su mismo grupo.
+
+    Cada victoria otorgará \textbf{3 puntos}, y cada empate otorgará \textbf{1 punto}.
+
+    \subsection{Criterios de clasificación y desempate}
+
+    La tabla de posiciones de cada grupo se definirá según la cantidad total de puntos obtenidos por cada clan.  
+    En caso de que dos o más clanes finalicen con la misma cantidad de puntos, el desempate se determinará aplicando los siguientes criterios en orden:
 
     \begin{enumerate}
-        \item  Resultados directos entre clanes empatados.
-        \item  Diferencia de puntos entre ataque y defensa.
-        \item  Total de puntos anotados.
-        \item  Número de partidos ganados contra oponentes empatados (TB).
+        \item \textbf{Resultado directo (enfrentamiento entre los clanes empatados).}
+        \item \textbf{Diferencia de puntos.}
+        \item \textbf{Mayor cantidad de rondas ganadas.}
+        \item \textbf{Sorteo / decisión de la organización.}
     \end{enumerate}
-   
-    Si el empate persiste, se realizará una definición en un único mapa, elegido por sorteo entre los mapas propuestos por los clanes.\par
-    Ejemplo de tabla de clasificación:
+
+    \subsection{Ejemplo de empate}
 
     \begin{center}
-        \begin{tabular}{||c c c c c c||} 
-         \hline
-         Nombre & Puntos & Partidos & Diferencia & Puntos Anotados & TB\\ [0.5ex] 
-         \hline\hline
-         Clan A & 39 & 13-0-1 & +60 & 85 & 2 \\ 
-         \hline
-         Clan B & 39 & 13-0-1 & +60 & 85 & 0 \\
-         \hline
+        \begin{tabular}{||c c c c c||} 
+        \hline
+        Clan & Puntos & Partidos & Dif. de puntos & Rondas ganadas \\ [0.5ex] 
+        \hline\hline
+        Clan A & 4 & 1-1-0 & +10 & 25 \\ 
+        \hline
+        Clan B & 4 & 1-1-0 & +10 & 26 \\
+        \hline
         \end{tabular}
     \end{center}
 
-    Fecha 1: Clan A vs Clan B - Gana Clan A \par
-    Fecha 8: Clan A vs Clan B - Gana Clan A
+    Si ambos clanes terminan igualados en puntos, se evaluará primero el resultado del enfrentamiento directo.  
+    Si persiste el empate, se utilizará la diferencia de puntos, luego rondas ganadas, y así sucesivamente.
 
-    \subsection{Etapa Final}
+    \subsection{Etapa Final (Playoffs)}
 
-    La etapa final se disputará bajo un sistema de todos contra todos entre los cinco clanes clasificados. Cada clan se enfrentará entre sí, y los dos mejores equipos avanzarán a una final al mejor de tres mapas.
+    Una vez finalizada la fase de grupos, los clanes clasificados avanzarán a la etapa final eliminatoria (\textbf{Playoffs}).
 
-    \subsection{Clasificación y Pareos}
-    La tabla de clasificación oficial será la definida y publicada en Challonge, la cual también servirá como referencia para los pareos.
-
-    \subsection{Desempate en la Etapa Final}
-    En caso de empate en la etapa final, se aplicará un sistema de overtime que consistirá en tres rondas por cada lado, con dos Endround por lado, hasta que se determine un ganador.
-
-    \subsection{Selección de Mapas para la Final}
-
-    Los líderes de los clanes propondrán mapas nuevos, La selección se realizará entre los representantes de los clanes.
-
-    \subsection{Tiempo de Compra}
+    Los emparejamientos se definirán de la siguiente manera:
 
     \begin{itemize}
-        \item Primer Preround: 20 segundos.
-        \item Rondas siguientes: 10 segundos.
+        \item \textbf{2° del Grupo B vs 3° del Grupo A}
+        \item \textbf{2° del Grupo A vs 3° del Grupo B}
     \end{itemize}
+
+    Los ganadores de estos encuentros avanzarán a las semifinales:
+
+    \begin{itemize}
+        \item \textbf{1° del Grupo A vs Ganador del cruce (2B vs 3A)}
+        \item \textbf{1° del Grupo B vs Ganador del cruce (2A vs 3B)}
+    \end{itemize}
+
+    Los vencedores de semifinales disputarán la \textbf{Gran Final} del torneo.
+
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=16cm]{img/playoff.png}
+        \caption{Etapa final.}
+        \label{fig:playoff}
+    \end{figure} 
+
+    \subsection{Equipos participantes}
+
+    \begin{enumerate}
+        \item {\textbf{\textasciitilde sK·}}
+        \item {\textbf{[+10]}}
+        \item {\textbf{n[G].}}
+        \item {\textbf{=®©=}}
+        \item {\textbf{[KÆN]*}}
+        \item {\textbf{Team6}}
+    \end{enumerate}
 
     \clearpage
 
     \section{Reglas dentro del Juego}
+
+    \subsection{Tiempo de Compra}
+
+    \begin{itemize}
+        \item Primer PreRound: 20 segundos.
+        \item Rondas siguientes: 15 segundos.
+    \end{itemize}
+
 
     \subsection{Mínimo de Jugadores}
     Cada equipo deberá contar con un mínimo de 5 jugadores en el encuentro. Si no se alcanza este mínimo, el partido se declarará como WalkOver (WO).
@@ -211,36 +226,36 @@
     Todos los jugadores deben presentarse con su nick registrado, el cual debe ser claramente identificable.
 
     \subsection{WalkOver (WO)}
-    Un partido declarado como WalkOver se adjudicará con una victoria para el equipo afectado, asignándole un puntaje equivalente al promedio de puntos de ataque de los demás clanes de su división (XX-0). Este puntaje se denominará Puntuación WalkOver (WO).
+    Un partido declarado como WalkOver se adjudicará con una victoria para el equipo afectado, asignándole una victoria (+3 puntos) en la tabla, y con un resultado de 12-0. Este puntuación se denominará puntuación WalkOver (WO) el cual en caso de desempate con otro clan no se considerará la diferencias de rondas.
 
     \subsection{Tiempo de Espera}
-    El tiempo máximo de espera para el inicio de un partido será de 15 minutos desde el horario pactado. (Propuesta sujeta a votación).
+    El tiempo máximo de espera para el inicio de un partido será de 15 minutos desde el horario pactado.
 
     \subsection{Administración del Match}
-    Antes de iniciar el partido, se debe acordar quién será el encargado de administrar el encuentro. Dicho administrador deberá:
+    Antes de iniciar el partido, el representante de cada clan debe estar logueado para en caso de necesitar un pause o anunciarlo, se debe acordar quién será el encargado de administrar el encuentro. Dicho administrador deberá:
 
     \begin{itemize}
         \item Grabar una demo con el comando:
         \begin{lstlisting}
             forcedemorec all clanA_vs_clanB
         \end{lstlisting}
-        \item Subir los resultados al canal de Discord designado para esta función. En caso de no ser posible, se habilitará un FTP para compartir los archivos.
+        \item Subir los resultados al canal de Discord designado para esta función.
         \item Actualizar resultados antes del inicio de la siguiente fecha.
     \end{itemize}
 
     \subsection{Grabación obligatoria y versiones permitidas}
-    Antes de comenzar el partido, asegúrense de utilizar algunas de las versiones permitidas: v469d, v469e  RC7 release, Legacy v451. La versión v469RC4 release no está permitida.
+    Antes de comenzar el partido, asegúrense de utilizar algunas de las versiones permitidas: v469d, v469e. La versión Legacy v451 y versiones menores a la v469d no están permitida (Ej: v469b y v69c).
 
-Todos los jugadores deben grabar una demo y transmitir por Discord. Esto será verificado por cada capitán o representante designado para el partido. En caso de problemas relacionados con hardware o recursos de computador, se deja a criterio de ambos clanes decidir sobre esta práctica.
+    Todos los jugadores deben grabar una demo y transmitir por Discord. Esto será verificado por cada capitán o representante designado para el partido. En caso de problemas relacionados con hardware o recursos de computador, se deja a criterio de ambos clanes decidir sobre esta práctica.
 
-El observador designado para verificar la grabación debe tener el micrófono apagado y el modo de audífonos desactivado en Discord \ref{fig:discord}, en el canal donde esté observando. Esta designación debe realizarse antes del partido.
+    El observador designado para verificar la grabación debe tener el micrófono apagado y el modo de audífonos desactivado en Discord \ref{fig:discord}, en el canal donde esté observando. Esta designación debe realizarse antes del partido.
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=8cm]{img/discord.png}
-    \caption{Reglas discord para observador.}
-    \label{fig:discord}
-\end{figure} 
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=8cm]{img/discord.png}
+        \caption{Reglas discord para observador.}
+        \label{fig:discord}
+    \end{figure} 
 
     \subsection{Solicitud de Demos}
     Los representantes de los clanes pueden solicitar demos a los administradores dentro de un plazo máximo de dos rondas después del encuentro. Los jugadores deberán subir las demos al canal (DEMOS) de Discord en un plazo máximo de 48 horas tras la notificación. De no cumplir, los líderes de los clanes analizarán una posible sanción.
@@ -249,17 +264,18 @@ El observador designado para verificar la grabación debe tener el micrófono ap
     El chat “Say” está prohibido durante los partidos, excepto para los representantes de cada clan. Las infracciones serán sancionadas con un Warning. Si se reincide, el jugador recibirá un Mute durante el partido siguiente. El mute será levantado al finalizar el encuentro.
 
     \subsection{Uso de Bugs}
-    Está estrictamente prohibido el uso de bugs o defectos de los mapas durante los partidos.
+    Está estrictamente prohibido el uso de bugs o defectos de los mapas durante los partidos, si un jugador es descubierto usando un error a su favor este será sancionado sin jugar el próximo mapa.
 
     \subsection{Reglas para Rehenes}
 
     \begin{itemize}
         \item Los rehenes pueden moverse durante todo el partido sin restricción de movimiento y sin que afecte el desarrollo del mapa.
-        \item Si un rehén muere o se bugea, y hay tiempo para rescatarlo, el punto será para el “SF”. Si no hay tiempo, el punto será para los terroristas.
-        \item La sanción será de un punto de partido si el rehén se Bugea intencionalmente.
+        \item Si un rehén muere o se Bugea, y hay tiempo para rescatarlo, el punto será para el “SF”. Si no hay tiempo, el punto será para los terroristas.
+        \item  La sanción será de un punto de partido (Ronda de mapa) si el rehén se Bugea intencionalmente. 
     \end{itemize}
 
-    
+    Esto puede alegarse al finalizar el encuentro o si es necesario se pueden solicitar una pausa antes de iniciar una ronda, donde el representante o el arbitro debe tomar la decisión y aplicar la sanción que se especifica arriba. 
+
     \begin{figure}[htb]
         \centering
         \includegraphics[width=8cm]{img/host_bug.png}
@@ -287,7 +303,7 @@ El observador designado para verificar la grabación debe tener el micrófono ap
     \end{minipage}
 
     \subsection{Abandono de un Clan}
-    Si un clan abandona la competición, será eliminado del Challonge, y los clanes que lo enfrentaban recibirán 0 puntos. tomando en cuenta que el clan nunca existió
+    Si un clan abandona la competición, será eliminado del Challonge, y los clanes que lo enfrentaban recibirán 3 puntos con un resultado de 0-0.
 
     \subsection{Rondas por Partido}
     Cada partido consta de 24 rondas (12 por lado). Si un equipo abandona, los puntos faltantes serán otorgados al equipo que se mantenga con al menos 5 jugadores.
@@ -302,7 +318,7 @@ El observador designado para verificar la grabación debe tener el micrófono ap
     Se permiten cambios de horario con 24 horas de antelación y con la aprobación del equipo contrario.
 
     \subsection{Fechas de Partidos}
-    Los partidos deben jugarse entre domingo y miércoles. En caso de conflicto, el encuentro será obligatorio el domingo a las 23:00 horas.
+    Los partidos deben jugarse entre los días jueves y miércoles de la siguiente semana. El plazo máximo del encuentro será obligatorio el miércoles a las 23:00 horas.
 
     \subsection{Administración del Servidor}
     Solo se permite un administrador por equipo dentro del servidor.
@@ -314,14 +330,17 @@ El observador designado para verificar la grabación debe tener el micrófono ap
     \clearpage
 
     \section{Sanciones}
-    Todas las sanciones están estipuladas en este reglamento en sus respectivos apartados. En caso de situaciones no contempladas o calificadas como "atípicas", se realizará una evaluación del caso en conjunto con los representantes de cada clan para determinar la sanción correspondiente.
+    Todas las sanciones están estipuladas en este reglamento en sus respectivos apartados. En caso de situaciones no contempladas o calificadas como atípicas, se realizará una evaluación del caso en conjunto con los representantes de cada clan para determinar la sanción correspondiente.
 
     Ningún miembro del Staff ni de la administración podrá participar ni influir en las decisiones o sanciones que se apliquen si su clan está involucrado en el caso en cuestión.
 
     \subsection{Sobre el uso de trampas}
-    Si un jugador es sorprendido utilizando trampas (Cheats) o modificando el archivo INI de manera no autorizada (por ejemplo, no lighting, no recoil u otras modificaciones), se procederá a imponer la sanción máxima de acuerdo con la resolución acordada entre los representantes de los clanes involucrados.
+    Si un jugador es sorprendido utilizando trampas (Cheats) o modificando el archivo INI de manera no autorizada (por ejemplo no lighting, no recoil u otras modificaciones), se procederá a imponer la sanción máxima de acuerdo con la resolución acordada entre los representantes de los clanes involucrados.
 
     Esta normativa aplica tanto para partidos de liga como para servidores de la comunidad. Cualquier modificación no autorizada será considerada como uso de trampas o manipulación indebida del archivo INI, lo que conllevará la sanción estipulada.
+
+    \clearpage
+
 
 
 \end{document}
