@@ -18,6 +18,7 @@
 \usepackage{longtable} % Para tablas largas que ocupen varias páginas
 \usepackage{zed-csp} % inserción de tablas
 \usepackage[scaled]{helvet} % Fuente Helvetica
+\usepackage{float} % imagen debajo del texto asociado
 \usepackage[pages=some]{background} % imagen de fondo
 \usepackage{sectsty} 
 \usepackage{csquotes} % cargar para asegurar de que los textos citados se componen de acuerdos al idioma principal
@@ -303,7 +304,7 @@
 
     Esto puede alegarse al finalizar el encuentro o si es necesario se pueden solicitar una pausa antes de iniciar una ronda, donde el representante o el arbitro debe tomar la decisión y aplicar la sanción que se especifica arriba. 
 
-    \begin{figure}[htb]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=8cm]{img/host_bug.png}
         \caption{Host no permitido.}
@@ -317,19 +318,17 @@
 
     En caso de cuestionamientos o simplemente no hay acuerdo entre los clanes, se solicitará el demo para aclarar las dudas, esto una vez terminado el partido.
     
-    \begin{minipage}{0.40\textwidth}
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{img/c4_bug.png}
-        \captionof{figure}{C4 No permitida}
-    \end{minipage}
-    
-    \hspace{0.05\textwidth}
+        \includegraphics[width=8cm]{img/c4_bug.png}
+        \caption{C4 No permitida}
+    \end{figure}
 
-    \begin{minipage}{0.45\textwidth}
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{img/c4_nobug.png}
-        \captionof{figure}{C4 permitida}
-    \end{minipage}
+        \includegraphics[width=8cm]{img/c4_nobug.png}
+        \caption{C4 permitida}
+    \end{figure}
 
     \subsection{Abandono de un Clan}
     Si un clan abandona la competición, será eliminado del Challonge, y los clanes que lo enfrentaban recibirán 3 puntos con un resultado de 0-0.
